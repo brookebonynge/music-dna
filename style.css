@@ -1,13 +1,10 @@
 body {
   background-color: #ffffff;
   margin: 0;
+  padding: 10px;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #222;
   line-height: 1.6;
-}
-
-.h1{
-  text-align: center;
 }
 
 .intro-screen {
@@ -18,6 +15,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
   font-family: 'Gill Sans', sans-serif;
@@ -32,12 +30,11 @@ body {
 
 .record-img {
   position: absolute;
-  left: -300px; /* Start off screen */
+  left: -300px;
   width: 180px;
   transition: transform 1.5s ease-out, left 1.5s ease-out;
 }
 
-/* When active */
 .record-img.animate-in {
   left: 50%;
   transform: translateX(-50%);
@@ -61,7 +58,7 @@ body {
 .hero h1 {
   font-size: 1.8rem;
   font-weight: bold;
-  max-width: 700px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -110,7 +107,7 @@ body {
 }
 
 .genre-section {
-  padding: 4rem 1rem;
+  padding: 4rem 2rem;
   background-color: #ffffff;
   text-align: center;
   border-top: 1px solid #eee;
@@ -119,7 +116,7 @@ body {
 .genre-heading {
   font-size: 1.6rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .genre-covers {
