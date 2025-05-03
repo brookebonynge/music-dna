@@ -4,29 +4,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-
     if (scrollY > 20) {
       record.classList.add('animate-in');
     }
-
     if (scrollY > window.innerHeight - 100) {
       document.querySelector('.intro-screen').style.display = 'none';
       mainContent.classList.remove('hidden');
     }
   });
-});
 
-
-document.addEventListener('DOMContentLoaded', () => {
-  const genreSections = document.querySelectorAll('.genre');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+  document.querySelectorAll('.music-note-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const fact = button.getAttribute('data-fact');
+      showFunFact(fact);
     });
-  }, { threshold: 0.2 });
-
-  genreSections.forEach(section => observer.observe(section));
+  });
 });
+
+function showFunFact(text) {
+  const popup = document.createElement('div');
+  popup.className = 'fun-fact-popup active';
+  popup.innerHTML = `
+    <button class="popup-close" onclick="this.parentElement.remove()">×</button>
+    ${text}
+  `;
+  document.body.appendChild(popup);
+}

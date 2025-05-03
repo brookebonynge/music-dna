@@ -16,7 +16,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   font-family: 'Gill Sans', sans-serif;
   position: relative;
@@ -149,4 +149,60 @@ body {
   font-size: 1.05rem;
   color: #444;
   line-height: 1.6;
+}
+
+.main-content.hidden {
+  display: none;
+}
+
+.music-note-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ec6f2c;
+  margin-top: 10px;
+}
+
+.music-note-btn:hover {
+  color: #d35300;
+  transform: scale(1.2);
+  transition: transform 0.2s, color 0.2s;
+}
+
+.fun-fact-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #222;
+  border: 2px solid #ec6f2c;
+  padding: 1rem 1.5rem;
+  z-index: 9999;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  max-width: 300px;
+  font-size: 1rem;
+  line-height: 1.4;
+  display: none;
+}
+
+.fun-fact-popup.active {
+  display: block;
+}
+
+.popup-close {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #999;
+}
+
+.popup-close:hover {
+  color: #222;
 }
